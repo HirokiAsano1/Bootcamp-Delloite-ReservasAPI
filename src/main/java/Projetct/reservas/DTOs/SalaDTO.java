@@ -18,8 +18,6 @@ public class SalaDTO {
     private String nome;
     private Integer capacidadeMaxima;
     private String localizacao;
-    //private List<ReservaDTO> reservas;
-
 
     public SalaDTO (Sala sala)
     {
@@ -27,9 +25,6 @@ public class SalaDTO {
         this.nome = sala.getNome();
         this.capacidadeMaxima = sala.getCapacidadeMaxima();
         this.localizacao = sala.getLocalizacao();
-        //this.reservas = sala.getReservas().stream()
-                //.map(ReservaDTO::new)
-               // .collect(Collectors.toList());
 
     }
 }

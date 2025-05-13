@@ -22,7 +22,6 @@ public class ReservaDTO {
 
     private LocalDateTime horaInicio;
 
-
     private LocalDateTime horaFinal;
 
     private Long salaId;
@@ -32,6 +31,7 @@ public class ReservaDTO {
         this.nomeResponsavel = reserva.getNomeResponsavel();
         this.horaInicio = reserva.getHoraInicio();
         this.horaFinal = reserva.getHoraFinal();
-        this.salaId = reserva.getSala().getId();
+        this.salaId = reserva.getSala() != null ? reserva.getSala().getId() : null;
+
     }
 }

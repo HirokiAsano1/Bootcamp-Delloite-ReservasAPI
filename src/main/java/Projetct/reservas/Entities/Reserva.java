@@ -27,6 +27,5 @@ public class Reserva {
 
     @ManyToOne
     @JoinColumn(name = "sala_id")
-    @JsonBackReference
     private Sala sala;
 }

@@ -20,11 +20,12 @@ public class Sala {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true)
     private String nome;
+
     private Integer capacidadeMaxima;
     private String localizacao;
 
     @OneToMany(mappedBy = "sala")
-    @JsonManagedReference
     private List<Reserva> reservas = new ArrayList<Reserva>();
 }
